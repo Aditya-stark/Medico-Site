@@ -151,9 +151,9 @@ function Home() {
 
         {/* Image Slider *NOT FINAL*/}
         <InfiniteImageSlider />
-        {/* Footer */}
-        <Footer />
       </div>
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

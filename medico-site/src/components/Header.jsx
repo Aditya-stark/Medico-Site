@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaCartPlus, FaSearch, FaUser } from "react-icons/fa";
 import logo from "../assets/images/logo.png";
+import CategoriesDropDown from "./CategoriesDropDown";
 
 function Header() {
   const [searchOpen, setSearchOpen] = useState(false);
@@ -26,35 +27,11 @@ function Header() {
                 href="#category"
                 className="text-gray-700 hover:text-[#6bc5bb]"
               >
-                Category
+                <CategoriesDropDown />
               </a>
-              <ul className="absolute hidden group-hover:block bg-white shadow-md mt-2">
-                <li>
-                  <a
-                    href="#category1"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                  >
-                    Category 1
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#category2"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                  >
-                    Category 2
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#category3"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                  >
-                    Category 3
-                  </a>
-                </li>
-              </ul>
+              <div className="group-hover:block hidden absolute group-hover:pointer-events-auto"></div>
             </li>
+
             <li>
               <a href="#shop" className="text-gray-700 hover:text-[#6bc5bb]">
                 Shop
