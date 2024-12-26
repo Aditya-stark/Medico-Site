@@ -9,7 +9,7 @@ import DiscountProductCard from "../components/DiscountProduct-card";
 import latestDiscountModel from "../assets/images/latest-product-model.jpg";
 import { Bigbanner } from "../components/Bigbanner";
 import BigSectionName from "../components/BigSectionName";
-import ImageSlider from "../components/ImageSlider";
+import Footer from "../components/Footer";
 
 function Home() {
   const popularProductsData = [
@@ -96,7 +96,7 @@ function Home() {
         {/* Top Category */}
         <SectionName title="Top Category" link={"#"} className={"mt-5"} />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-10">
-          {[...Array(7)].map((_, index) => (
+          {[...Array(10)].map((_, index) => (
             <Categories_card key={index} />
           ))}
         </div>
@@ -120,8 +120,8 @@ function Home() {
         />
         <div className="flex flex-wrap">
           <div className="w-full lg:w-3/4">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-10">
-              {[...Array(10)].map((_, index) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-10">
+              {[...Array(8)].map((_, index) => (
                 <DiscountProductCard
                   key={index}
                   image={popularProducts.image1}
@@ -149,7 +149,7 @@ function Home() {
         <BigSectionName title="Our Clients" className="mt-10" />
 
         {/* Image Slider */}
-        <ImageSlider />
+        <Footer />
       </div>
     </div>
   );
