@@ -10,6 +10,7 @@ import latestDiscountModel from "../assets/images/latest-product-model.jpg";
 import { Bigbanner } from "../components/Bigbanner";
 import BigSectionName from "../components/BigSectionName";
 import Footer from "../components/Footer";
+import { InfiniteImageSlider } from "../components/InfiniteImageSlider";
 
 function Home() {
   const popularProductsData = [
@@ -148,7 +149,9 @@ function Home() {
         {/* Our Clients Sections */}
         <BigSectionName title="Our Clients" className="mt-10" />
 
-        {/* Image Slider */}
+        {/* Image Slider *NOT FINAL*/}
+        <InfiniteImageSlider />
+        {/* Footer */}
         <Footer />
       </div>
     </div>
