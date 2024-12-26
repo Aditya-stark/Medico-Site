@@ -23,15 +23,8 @@ function Header() {
               </a>
             </li>
             <li className="relative group">
-              <a
-                href="#category"
-                className="text-gray-700 hover:text-[#6bc5bb]"
-              >
-                <CategoriesDropDown />
-              </a>
-              <div className="group-hover:block hidden absolute group-hover:pointer-events-auto"></div>
+              <CategoriesDropDown />
             </li>
-
             <li>
               <a href="#shop" className="text-gray-700 hover:text-[#6bc5bb]">
                 Shop
