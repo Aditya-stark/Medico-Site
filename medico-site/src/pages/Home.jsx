@@ -11,6 +11,7 @@ import { Bigbanner } from "../components/Bigbanner";
 import BigSectionName from "../components/BigSectionName";
 import Footer from "../components/Footer";
 import { InfiniteImageSlider } from "../components/InfiniteImageSlider";
+import WhyChooseUs from "../components/WhyChooseUs";
 
 function Home() {
   const popularProductsData = [
@@ -146,12 +147,15 @@ function Home() {
         {/* Big Banner */}
         <Bigbanner />
 
+        {/* Why Choose Us */}
+        <WhyChooseUs />
+
         {/* Our Clients Sections */}
         <BigSectionName title="Our Clients" className="mt-10" />
 
+      </div>
         {/* Image Slider *NOT FINAL*/}
         <InfiniteImageSlider />
-      </div>
       {/* Footer */}
       <Footer />
     </div>
