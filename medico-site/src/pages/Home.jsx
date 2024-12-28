@@ -9,7 +9,7 @@ import DiscountProductCard from "../components/DiscountProduct-card";
 import latestDiscountModel from "../assets/images/latest-product-model.jpg";
 import { Bigbanner } from "../components/Bigbanner";
 import BigSectionName from "../components/BigSectionName";
-import Footer from "../components/Footer";
+
 import { InfiniteImageSlider } from "../components/InfiniteImageSlider";
 import WhyChooseUs from "../components/WhyChooseUs";
 
@@ -90,19 +90,17 @@ function Home() {
   return (
     <div className="bg-white min-h-screen w-full">
       {/* Slide Show */}
-      <div className="flex justify-center items-center h-[600px]">
+      <div className="flex justify-center items-center h-fit  lg:h-[600px]">
         <SlideShow />
       </div>
 
-      <div className="p-10 pl-20 pr-20 mr-5 ml-5">
-        {/* Top Category */}
+      <div className="p-10 pl-5 pr-5 md:pl-20 md:pr-20 mr-5 ml-5">
         <SectionName title="Top Category" link={"#"} className={"mt-5"} />
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-10">
+        <div className="grid grid-cols-2  md:grid-cols-3 w1257:grid-cols-5 lg:grid-cols-4 gap-4 p-0  md:p-10 justify-center">
           {[...Array(10)].map((_, index) => (
             <Categories_card key={index} />
           ))}
         </div>
-
         {/* Popular Product */}
         <SectionName title="Popular Product" link={"#"} className="mt-10" />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-4 p-10">
@@ -110,10 +108,8 @@ function Home() {
             <PopularProductCard key={index} {...product} />
           ))}
         </div>
-
         {/* Features Banner */}
         <FeaturesBanner />
-
         {/* Latest Discount Products and Side Image */}
         <SectionName
           title="Latest Discount Products"
@@ -143,21 +139,15 @@ function Home() {
             />
           </div>
         </div>
-
         {/* Big Banner */}
         <Bigbanner />
-
         {/* Why Choose Us */}
         <WhyChooseUs />
-
         {/* Our Clients Sections */}
         <BigSectionName title="Our Clients" className="mt-10" />
-
       </div>
-        {/* Image Slider *NOT FINAL*/}
-        <InfiniteImageSlider />
-      {/* Footer */}
-      <Footer />
+      {/* Image Slider *NOT FINAL*/}
+      <InfiniteImageSlider />
     </div>
   );
 }
