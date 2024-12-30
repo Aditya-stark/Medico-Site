@@ -1,7 +1,8 @@
 import { FaCartPlus, FaUser, FaBars, FaTimes } from "react-icons/fa";
-import logo from "../assets/images/logo.png";
-import CategoriesDropDown from "./CategoriesDropDown";
+import logo from "../../assets/images/logo.png";
+import CategoriesDropDown from "../CategoriesDropDown";
 import { useState, useEffect } from "react";
+import { Link, NavLink } from "react-router-dom";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,53 +18,68 @@ function Header() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const navLinkStyle =
+    "text-[12px] md:text-[16px] text-gray-700 hover:text-mainCyan";
+  const activeStyle = "text-mainCyan font-semibold";
+
   return (
     <header className="bg-white shadow-md p-5 lg:pl-20 lg:pr-20 flex items-center justify-between fixed top-0 left-0 right-0 z-50">
       <div className="flex items-center justify-between w-full">
         <div className="flex items-center">
           {/* Logo */}
-          <img
-            src={logo}
-            alt="Logo"
-            className="h-7 w-auto lg:h-10 lg:w-auto mr-3 lg:mr-5 lg:pr-5"
-          />
+          <Link to="/">
+            <img
+              src={logo}
+              alt="Logo"
+              className="h-7 w-auto lg:h-10 lg:w-auto mr-3 lg:mr-5 lg:pr-5"
+            />
+          </Link>
+
           {/* Navigation */}
           <nav className="hidden sm:flex">
             <ul className="flex sm:space-x-2 md:space-x-4">
               <li>
-                <a
-                  href="#home"
-                  className="text-[12px] md:text-[16px] text-gray-700 hover:text-mainCyan"
+                <NavLink
+                  to="/"
+                  className={(e) =>
+                    e.isActive ? `${navLinkStyle} ${activeStyle}` : navLinkStyle
+                  }
                 >
                   Home
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a
-                  href="#about"
-                  className="text-[12px] md:text-[16px] text-gray-700 hover:text-mainCyan"
+                <NavLink
+                  to={"/about"}
+                  className={(e) =>
+                    e.isActive ? `${navLinkStyle} ${activeStyle}` : navLinkStyle
+                  }
                 >
                   About
-                </a>
+                </NavLink>
               </li>
               <li className="relative group">
                 <CategoriesDropDown />
               </li>
               <li>
-                <a
-                  href="#shop"
-                  className="text-[12px] md:text-[16px] text-gray-700 hover:text-mainCyan"
+                <NavLink
+                  to="/shop"
+                  className={(e) =>
+                    e.isActive ? `${navLinkStyle} ${activeStyle}` : navLinkStyle
+                  }
                 >
                   Shop
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a
-                  href="#contact"
-                  className="text-[12px] md:text-[16px] text-gray-700 hover:text-mainCyan"
+                <NavLink
+                  to="/contact"
+                  className={(e) =>
+                    e.isActive ? `${navLinkStyle} ${activeStyle}` : navLinkStyle
+                  }
                 >
                   Contact
-                </a>
+                </NavLink>
               </li>
             </ul>
           </nav>
@@ -108,6 +124,7 @@ function Header() {
           </button>
         </div>
       </div>
+      
       {/* Mobile Menu */}
       <div
         className={`fixed top-0 right-0 h-full bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${
@@ -144,42 +161,55 @@ function Header() {
             </svg>
           </button>
         </div>
+
         <nav className="mt-4 p-4">
           <ul className="flex flex-col space-y-4">
             <li>
-              <a
-                href="#home"
-                className="text-[16px] text-gray-700 hover:text-mainCyan"
+              <NavLink
+                to="/"
+                className={(e) =>
+                  e.isActive ? `${navLinkStyle} ${activeStyle}` : navLinkStyle
+                }
+                onClick={() => setIsMenuOpen(false)}
               >
                 Home
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a
-                href="#about"
-                className="text-[16px] text-gray-700 hover:text-mainCyan"
+              <NavLink
+                to="/about"
+                className={(e) =>
+                  e.isActive ? `${navLinkStyle} ${activeStyle}` : navLinkStyle
+                }
+                onClick={() => setIsMenuOpen(false)}
               >
                 About
-              </a>
+              </NavLink>
             </li>
             <li className="relative group">
               <CategoriesDropDown />
             </li>
             <li>
-              <a
-                href="#shop"
-                className="text-[16px] text-gray-700 hover:text-mainCyan"
+              <NavLink
+                to="/shop"
+                className={(e) =>
+                  e.isActive ? `${navLinkStyle} ${activeStyle}` : navLinkStyle
+                }
+                onClick={() => setIsMenuOpen(false)}
               >
                 Shop
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a
-                href="#contact"
-                className="text-[16px] text-gray-700 hover:text-mainCyan"
+              <NavLink
+                to="/contact"
+                className={(e) =>
+                  e.isActive ? `${navLinkStyle} ${activeStyle}` : navLinkStyle
+                }
+                onClick={() => setIsMenuOpen(false)}
               >
                 Contact
-              </a>
+              </NavLink>
             </li>
           </ul>
         </nav>

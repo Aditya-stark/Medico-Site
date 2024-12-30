@@ -1,19 +1,19 @@
 import React from "react";
-import logo from "../assets/images/logo-light.png";
+import logo from "../../assets/images/logo-light.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPhone,
   faMapMarkerAlt,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
-import upi from "../assets/images/PaymentLogo/UPI-Color.png";
-import visa from "../assets/images/PaymentLogo/visa.svg";
-import mastercard from "../assets/images/PaymentLogo/mastercard.svg";
-import facebook from "../assets/images/SocialIcon/facebook.svg";
-import instagram from "../assets/images/SocialIcon/Instagram.svg";
-import linkedin from "../assets/images/SocialIcon/linkedin.svg";
-import whatsapp from "../assets/images/SocialIcon/whatsapp.svg";
-import youtube from "../assets/images/SocialIcon/youtube.svg";
+import upi from "../../assets/images/PaymentLogo/UPI-Color.png";
+import visa from "../../assets/images/PaymentLogo/visa.svg";
+import mastercard from "../../assets/images/PaymentLogo/mastercard.svg";
+import facebook from "../../assets/images/SocialIcon/facebook.svg";
+import instagram from "../../assets/images/SocialIcon/Instagram.svg";
+import linkedin from "../../assets/images/SocialIcon/linkedin.svg";
+import whatsapp from "../../assets/images/SocialIcon/whatsapp.svg";
+import youtube from "../../assets/images/SocialIcon/youtube.svg";
 
 export default function Footer() {
   return (
