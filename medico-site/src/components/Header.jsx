@@ -33,7 +33,7 @@ function Header() {
               <li>
                 <a
                   href="#home"
-                  className="text-[12px] md:text-[16px] text-gray-700 hover:text-[#6bc5bb]"
+                  className="text-[12px] md:text-[16px] text-gray-700 hover:text-mainCyan"
                 >
                   Home
                 </a>
@@ -41,7 +41,7 @@ function Header() {
               <li>
                 <a
                   href="#about"
-                  className="text-[12px] md:text-[16px] text-gray-700 hover:text-[#6bc5bb]"
+                  className="text-[12px] md:text-[16px] text-gray-700 hover:text-mainCyan"
                 >
                   About
                 </a>
@@ -52,7 +52,7 @@ function Header() {
               <li>
                 <a
                   href="#shop"
-                  className="text-[12px] md:text-[16px] text-gray-700 hover:text-[#6bc5bb]"
+                  className="text-[12px] md:text-[16px] text-gray-700 hover:text-mainCyan"
                 >
                   Shop
                 </a>
@@ -60,7 +60,7 @@ function Header() {
               <li>
                 <a
                   href="#contact"
-                  className="text-[12px] md:text-[16px] text-gray-700 hover:text-[#6bc5bb]"
+                  className="text-[12px] md:text-[16px] text-gray-700 hover:text-mainCyan"
                 >
                   Contact
                 </a>
@@ -75,7 +75,7 @@ function Header() {
               type="search"
               name="search"
               placeholder="Search"
-              className="bg-white sm:h-8 md:h-10 px-5 pr-10 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 border border-gray-300 sm:w-full lg:w-full"
+              className="bg-white sm:h-8 md:h-10 px-5 pr-10 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 border border-gray-300 sm:w-[90%] lg:w-full"
             />
             <button
               type="submit"
@@ -94,14 +94,14 @@ function Header() {
         </div>
         {/* Cart and User Icons */}
         <div className="flex items-center">
-          <button className="ml-4 text-gray-700 hover:text-[#6bc5bb] p-2 rounded-md">
+          <button className="ml-4 text-gray-700 hover:text-mainCyan p-2 rounded-md">
             <FaCartPlus className="h-5 w-5 md:h-6 md:w-6 lg:h-7 lg:w-7" />
           </button>
-          <button className="ml-4 text-gray-700 hover:text-[#6bc5bb] p-2 rounded-md">
+          <button className="ml-4 text-gray-700 hover:text-mainCyan p-2 rounded-md">
             <FaUser className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />
           </button>
           <button
-            className="ml-4 text-gray-700 hover:text-[#6bc5bb] p-2 rounded-md sm:hidden"
+            className="ml-4 text-gray-700 hover:text-mainCyan p-2 rounded-md sm:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <FaBars className="h-5 w-5" />
@@ -117,7 +117,7 @@ function Header() {
         <div className="flex justify-between items-center p-4">
           <h2 className="text-lg font-semibold">Menu</h2>
           <button
-            className="text-gray-700 hover:text-[#6bc5bb] p-2 rounded-md"
+            className="text-gray-700 hover:text-mainCyan p-2 rounded-md"
             onClick={() => setIsMenuOpen(false)}
           >
             <FaTimes className="h-5 w-5" />
@@ -149,7 +149,7 @@ function Header() {
             <li>
               <a
                 href="#home"
-                className="text-[16px] text-gray-700 hover:text-[#6bc5bb]"
+                className="text-[16px] text-gray-700 hover:text-mainCyan"
               >
                 Home
               </a>
@@ -157,7 +157,7 @@ function Header() {
             <li>
               <a
                 href="#about"
-                className="text-[16px] text-gray-700 hover:text-[#6bc5bb]"
+                className="text-[16px] text-gray-700 hover:text-mainCyan"
               >
                 About
               </a>
@@ -168,7 +168,7 @@ function Header() {
             <li>
               <a
                 href="#shop"
-                className="text-[16px] text-gray-700 hover:text-[#6bc5bb]"
+                className="text-[16px] text-gray-700 hover:text-mainCyan"
               >
                 Shop
               </a>
@@ -176,7 +176,7 @@ function Header() {
             <li>
               <a
                 href="#contact"
-                className="text-[16px] text-gray-700 hover:text-[#6bc5bb]"
+                className="text-[16px] text-gray-700 hover:text-mainCyan"
               >
                 Contact
               </a>

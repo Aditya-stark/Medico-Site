@@ -9,7 +9,6 @@ import DiscountProductCard from "../components/DiscountProduct-card";
 import latestDiscountModel from "../assets/images/latest-product-model.jpg";
 import { Bigbanner } from "../components/Bigbanner";
 import BigSectionName from "../components/BigSectionName";
-
 import { InfiniteImageSlider } from "../components/InfiniteImageSlider";
 import WhyChooseUs from "../components/WhyChooseUs";
 
