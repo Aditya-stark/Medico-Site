@@ -4,18 +4,27 @@ import AboutSection from "../components/AboutUs/AboutSection";
 import FeaturesBanner from "../components/FeaturesBanner";
 import { ProfileCard } from "../components/AboutUs/ProfileCard";
 import BigSectionName from "../components/BigSectionName";
+import { Link } from "react-router-dom";
+
 export default function AboutUs() {
   return (
     <div>
       {/* Head Title */}
       <div
-        className="head bg-cover bg-center h-[100%] md:h-[200px] flex items-center "
+        className="head bg-cover bg-center h-[100%] md:h-[200px] flex items-center"
         style={{
           backgroundImage: `url(${headImg})`,
         }}
       >
-        <div className="about-us-text mx-2 p-4 text-[#13324e] font-bold text-xl md:text-3xl md:p-8 md:mx-14">
-          About Us
+        <div className="about-us-text mx-2 p-4 text-[#13324e] space-y-2 font-bold text-xl md:text-3xl md:p-8 md:mx-14">
+          <div>About Us</div>
+          <div className="flex items-center text-sm md:text-base  text-gray-600">
+            <Link to="/" className="hover:text-mainCyan text-[#13324e]">
+              Home
+            </Link>
+            <span className="mx-2 text-[#13324e]">&gt;&gt;</span>
+            <span className="text-mainCyan ">About Us</span>
+          </div>
         </div>
       </div>
       <div className="mx-10">
