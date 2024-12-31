@@ -121,9 +121,18 @@ function Header() {
               <FaCartPlus className="h-5 w-5 md:h-6 md:w-6 lg:h-7 lg:w-7" />
             </button>
           </NavLink>
-          <button className="ml-4 text-gray-700 hover:text-mainCyan p-2 rounded-md">
-            <FaUser className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />
-          </button>
+
+          {/* User */}
+          <NavLink
+            to={"/login"}
+            className={(e) =>
+              e.isActive ? "text-mainCyan" : "text-gray-700 hover:text-mainCyan"
+            }
+          >
+            <button className="ml-4 text-gray-700 hover:text-mainCyan p-2 rounded-md">
+              <FaUser className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />
+            </button>
+          </NavLink>
           <button
             className="ml-4 text-gray-700 hover:text-mainCyan p-2 rounded-md sm:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}

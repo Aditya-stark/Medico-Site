@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function CartTable({ cartItems, onQuantityChange, onRemoveItem }) {
+  
   return (
     <div className="container pt-6 sm:pt-0 md:p-6 bg-gray-100 rounded-lg shadow">
       <div className="flex w-full flex-col lg:flex-row gap-8">

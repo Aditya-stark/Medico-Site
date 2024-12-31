@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import headImg from "../assets/images/AboutUsImg/headImg.jpg";
 import { useState } from "react";
+import PageTitle from "../components/PageTitle";
 import CartTable from "../components/Cart/CartTable";
 import CartSummary from "../components/Cart/CartSummary";
 
@@ -89,23 +88,7 @@ export default function Cart() {
   return (
     <div className="overflow-x-hidden">
       {/* Head Title */}
-      <div
-        className="head bg-cover bg-center h-[100%] md:h-[200px] flex items-center"
-        style={{
-          backgroundImage: `url(${headImg})`,
-        }}
-      >
-        <div className="mx-2 p-4 text-[#13324e] space-y-2 font-bold text-xl md:text-3xl md:p-8 md:mx-14">
-          <div>Shop Cart</div>
-          <div className="flex items-center text-sm md:text-base  text-gray-600">
-            <Link to="/" className="hover:text-mainCyan text-[#13324e]">
-              Home
-            </Link>
-            <span className="mx-2 text-[#13324e]">&gt;&gt;</span>
-            <span className="text-mainCyan ">Shop Cart</span>
-          </div>
-        </div>
-      </div>
+      <PageTitle title="Shop Cart" />
 
       {/* Cart Items Table and Cart Summary */}
       <div className="p-0 sm:p-2 md:px-[10%] md:py-[5%] flex flex-col w-full lg:flex-row gap-8">

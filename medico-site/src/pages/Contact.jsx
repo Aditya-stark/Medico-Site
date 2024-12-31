@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import headImg from "../assets/images/AboutUsImg/headImg.jpg";
+import PageTitle from "../components/PageTitle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMapMarkerAlt,
@@ -10,7 +10,6 @@ import {
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import "leaflet-defaulticon-compatibility";
-import { Link } from "react-router-dom";
 
 export default function Contact() {
   useEffect(() => {
@@ -43,23 +42,7 @@ export default function Contact() {
   return (
     <div className="overflow-x-hidden">
       {/* Head title */}
-      <div
-        className="head bg-cover bg-center h-[100%] md:h-[200px] flex items-center "
-        style={{
-          backgroundImage: `url(${headImg})`,
-        }}
-      >
-        <div className="about-us-text mx-2 p-4 text-[#13324e] space-y-2 font-bold text-xl md:text-3xl md:p-8 md:mx-14">
-          <div>Contact Us</div>
-          <div className="flex items-center text-sm md:text-base  text-gray-600">
-            <Link to="/" className="hover:text-mainCyan text-[#13324e]">
-              Home
-            </Link>
-            <span className="mx-2 text-[#13324e]">&gt;&gt;</span>
-            <span className="text-mainCyan ">Contact Us</span>
-          </div>
-        </div>
-      </div>
+      <PageTitle title="Contact Us" />
 
       {/* Contact Details & Form */}
       <div className="bg-gray-100 p-8 min-h-screen flex items-center justify-center">
