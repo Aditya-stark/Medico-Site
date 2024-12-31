@@ -110,9 +110,17 @@ function Header() {
         </div>
         {/* Cart and User Icons */}
         <div className="flex items-center">
-          <button className="ml-4 text-gray-700 hover:text-mainCyan p-2 rounded-md">
-            <FaCartPlus className="h-5 w-5 md:h-6 md:w-6 lg:h-7 lg:w-7" />
-          </button>
+          {/* Cart */}
+          <NavLink
+            to="/cart"
+            className={(e) =>
+              e.isActive ? "text-mainCyan" : "text-gray-700 hover:text-mainCyan"
+            }
+          >
+            <button className="p-2 rounded-md">
+              <FaCartPlus className="h-5 w-5 md:h-6 md:w-6 lg:h-7 lg:w-7" />
+            </button>
+          </NavLink>
           <button className="ml-4 text-gray-700 hover:text-mainCyan p-2 rounded-md">
             <FaUser className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />
           </button>
@@ -124,7 +132,7 @@ function Header() {
           </button>
         </div>
       </div>
-      
+
       {/* Mobile Menu */}
       <div
         className={`fixed top-0 right-0 h-full bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${

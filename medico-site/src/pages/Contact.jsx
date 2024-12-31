@@ -41,7 +41,7 @@ export default function Contact() {
   }, []);
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       {/* Head title */}
       <div
         className="head bg-cover bg-center h-[100%] md:h-[200px] flex items-center "

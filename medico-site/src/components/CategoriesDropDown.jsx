@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const categories = {
   Medicine: [
@@ -85,12 +86,12 @@ const CategoryContent = () => (
         <ul className="space-y-2">
           {items.map((item) => (
             <li key={item}>
-              <a
-                href={`#${item.toLowerCase().replace(/ /g, "-")}`}
+              <Link
+                to={`/${item.toLowerCase().replace(/ /g, "-")}`}
                 className="block text-sm hover:underline"
               >
                 {item}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
