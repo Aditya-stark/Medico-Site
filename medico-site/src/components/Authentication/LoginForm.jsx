@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../assets/images/logo.png";
 import { FaSignInAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function LoginForm() {
   return (
@@ -13,7 +14,7 @@ function LoginForm() {
           </p>
         </div>
 
-        <form>
+        <form onSubmit={(e) => e.preventDefault()}>
           <div className="mb-4">
             <label
               htmlFor="email"
@@ -43,9 +44,12 @@ function LoginForm() {
             />
           </div>
           <div className="text-right mb-6">
-            <a href="#" className="text-sm text-mainCyan hover:underline">
+            <Link
+              to={"/forgotpassword"}
+              className="text-mainCyan hover:underline"
+            >
               Forgot Password?
-            </a>
+            </Link>
           </div>
           <button
             type="submit"
@@ -58,9 +62,9 @@ function LoginForm() {
         <div className="text-center mt-6">
           <p className="text-sm text-gray-600">
             Don't have an account?{" "}
-            <a href="#" className="text-mainCyan hover:underline">
+            <Link to={"/signup"} className="text-mainCyan hover:underline">
               Register
-            </a>
+            </Link>
           </p>
         </div>
       </div>
