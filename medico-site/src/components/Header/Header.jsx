@@ -59,7 +59,15 @@ function Header() {
                 </NavLink>
               </li>
               <li className="relative group">
-                <CategoriesDropDown />
+                <NavLink
+                  to="/categories"
+                  className={(e) =>
+                    e.isActive ? `${navLinkStyle} ${activeStyle}` : navLinkStyle
+                  }
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <CategoriesDropDown />
+                </NavLink>
               </li>
               <li>
                 <NavLink
@@ -95,7 +103,7 @@ function Header() {
             />
             <button
               type="submit"
-              className="absolute inset-y-0 right-0 flex items-center pr-3"
+              className="absolute inset-y-0 right-0 flex items-center md:pr-3"
             >
               <svg
                 className="h-4 w-4 fill-current text-gray-600"
@@ -162,11 +170,11 @@ function Header() {
             type="search"
             name="search"
             placeholder="Search"
-            className="bg-white h-10 px-5 pr-10 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 border border-gray-300 w-full"
+            className="bg-white h-10 px-5 pr-10  rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 border border-gray-300 w-full"
           />
           <button
             type="submit"
-            className="absolute inset-y-0 right-0 flex items-center pr-3"
+            className="absolute inset-y-0 right-0 flex items-center pr-8"
           >
             <svg
               className="h-4 w-4 fill-current text-gray-600"
@@ -204,7 +212,15 @@ function Header() {
               </NavLink>
             </li>
             <li className="relative group">
-              <CategoriesDropDown />
+              <NavLink
+                to="/categories"
+                className={(e) =>
+                  e.isActive ? `${navLinkStyle} ${activeStyle}` : navLinkStyle
+                }
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Categories
+              </NavLink>
             </li>
             <li>
               <NavLink

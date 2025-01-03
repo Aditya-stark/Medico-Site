@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export default function SortDropDown({ onSort }) {
+export default function SortDropDown({ onSort  }) {
   const options = [
     { value: "default", label: "Default" },
     { value: "lowToHigh", label: "Low to High" },
