@@ -19,12 +19,12 @@ export default function SortDropDown({ onSort }) {
       </label>
       <select
         id="sort-dropdown"
-        className="bg-white text-gray-800 font-semibold py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-mainCyan transition-all duration-300"
+        className="bg-white text-gray-600  font-semibold py-1 px-1 md:py-2 md:px-4 text-sm md:text-base rounded-md focus:outline-none focus:ring-2 focus:ring-mainCyan transition-all duration-300 border-gray-300 border-2"
         onChange={handleSortChange}
         defaultValue="default"
       >
         {options.map((option) => (
-          <option key={option.value} value={option.value} >
+          <option key={option.value} value={option.value}>
             {option.label}
           </option>
         ))}

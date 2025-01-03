@@ -7,7 +7,7 @@ export default function SignUp() {
     <div className="overflow-x-hidden">
       {/* Head Title */}
       <PageTitle title="Sign Up" />
-
+      
       {/* SignUp Page */}
       <SignUpForm />
     </div>
