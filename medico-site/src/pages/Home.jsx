@@ -86,6 +86,69 @@ function Home() {
     },
   ];
 
+  const categories = [
+    {
+      id: 1,
+      name: "Medicine",
+      itemsCount: 30,
+      icon: "https://live.themewild.com/medion/assets/img/icon/medicine.svg",
+    },
+    {
+      id: 2,
+      name: "Health Care",
+      itemsCount: 20,
+      icon: "https://live.themewild.com/medion/assets/img/icon/health-care.svg",
+    },
+    {
+      id: 3,
+      name: "Beauty Care",
+      itemsCount: 50,
+      icon: "https://live.themewild.com/medion/assets/img/icon/beauty-care.svg",
+    },
+    {
+      id: 4,
+      name: "sexual wellness",
+      itemsCount: 10,
+      icon: "https://live.themewild.com/medion/assets/img/icon/sexual.svg",
+    },
+    {
+      id: 5,
+      name: "Fitness",
+      itemsCount: 15,
+      icon: "https://live.themewild.com/medion/assets/img/icon/fitness.svg",
+    },
+    {
+      id: 6,
+      name: "Lab Test",
+      itemsCount: 5,
+      icon: "https://live.themewild.com/medion/assets/img/icon/lab-test.svg",
+    },
+    {
+      id: 7,
+      name: "Baby & Mother Care",
+      itemsCount: 25,
+      icon: "https://live.themewild.com/medion/assets/img/icon/baby-mom-care.svg",
+    },
+    {
+      id: 8,
+      name: "Supplement",
+      itemsCount: 40,
+      icon: "https://live.themewild.com/medion/assets/img/icon/supplements.svg",
+    },
+    {
+      id: 9,
+      name: "Food & Nutrition",
+      itemsCount: 35,
+      icon: "https://live.themewild.com/medion/assets/img/icon/food-nutrition.svg",
+    },
+    {
+      id: 10,
+      name: "Equipment",
+      itemsCount: 60,
+      icon: "https://live.themewild.com/medion/assets/img/icon/medical-equipements.svg",
+    }
+  ];
+
   return (
     <div className="bg-white min-h-screen w-full">
       {/* Slide Show */}
@@ -93,13 +156,15 @@ function Home() {
         <SlideShow />
       </div>
 
-      <div className="p-10 pl-5 pr-5 md:pl-20 md:pr-20 mr-5 ml-5">
-        <SectionName title="Top Category" link={"#"} className={"mt-5"} />
+      <div className="p-10 pl-5 pr-5 md:pl-20 md:pr-20 md:mr-5 md:ml-5">
+        {/* Categories */}
+        <SectionName title="Top Category" link={"/categories"} className={"mt-5"} />
         <div className="grid grid-cols-2  md:grid-cols-3 w1257:grid-cols-5 lg:grid-cols-4 gap-4 p-0  md:p-10 justify-center">
-          {[...Array(10)].map((_, index) => (
-            <Categories_card key={index} />
+          {categories.map((category, index) => (
+            <Categories_card key={index} {...category} />
           ))}
         </div>
+
         {/* Popular Product */}
         <SectionName title="Popular Product" link={"#"} className="mt-10" />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-4 p-10">

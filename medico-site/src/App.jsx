@@ -9,6 +9,7 @@ import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import ForgotPassword from "./pages/ForgotPassword";
 import Shop from "./pages/Shop";
+import Categories from "./pages/Categories";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/forgotpassword" element={<ForgotPassword />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/categories" element={<Categories />} />
         </Routes>
       </div>
     </React.Fragment>
