@@ -10,6 +10,8 @@ import SignUp from "./pages/SignUp";
 import ForgotPassword from "./pages/ForgotPassword";
 import Shop from "./pages/Shop";
 import Categories from "./pages/Categories";
+import SingleProduct from "./pages/SingleProduct";
+// import { ProductsData } from "./pages/Shop";
 
 function App() {
   return (
@@ -25,6 +27,7 @@ function App() {
           <Route path="/forgotpassword" element={<ForgotPassword />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/categories" element={<Categories />} />
+          <Route path="/product/:productId" element={<SingleProduct />} />
         </Routes>
       </div>
     </React.Fragment>

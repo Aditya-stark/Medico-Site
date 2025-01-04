@@ -1,8 +1,6 @@
-import { i } from "framer-motion/client";
 import BigSectionName from "../components/BigSectionName";
 import Categories_card from "../components/Categories-card";
 import PageTitle from "../components/PageTitle";
-import { icon } from "leaflet";
 
 export default function Categories() {
   //dummy data for categories

@@ -4,115 +4,10 @@ import Dropdown from "../components/Shop/Dropdown";
 import PriceRange from "../components/Shop/PriceRange";
 import SortDropDown from "../components/Shop/SortDropDown";
 import ResetBtn from "../components/Shop/ResetBtn";
-import popularProducts from "../assets/images/PopularProducts";
 import ShopProductCard from "../components/Shop/ShopProductCard";
-import { b } from "framer-motion/client";
-import { badge } from "@material-tailwind/react";
+import { ProductsData } from "../DummyData/productdata"; // Import the dummy data
 
 export default function Shop() {
-  //Dummy Data
-  const popularProductsData = [
-    {
-      image: popularProducts.image1,
-      title: "True Balance Vitamin",
-      rating: 4.5,
-      price: "₹250.0",
-      badge: "Hot",
-      badgeColor: "bg-orange-500",
-      categories: ["Vitamins", "Supplements"],
-      brands: ["Brand 1"],
-    },
-    {
-      image: popularProducts.image2,
-      title: "Body Lotion 200ml",
-      rating: 4,
-      price: "₹150.0",
-      badge: "New",
-      badgeColor: "bg-green-500",
-      categories: ["Skin Care", "Body Care"],
-      brands: ["Brand 2"],
-    },
-    {
-      image: popularProducts.image3,
-      title: "Face Mask",
-      rating: 4.5,
-      price: "₹50.0",
-      badge: "Trending",
-      badgeColor: "bg-[#579f97]",
-      categories: ["Skin Care", "Face Care"],
-      brands: ["Brand 3"],
-    },
-    {
-      image: popularProducts.image4,
-      title: "Vitamin B12",
-      rating: 4.5,
-      price: "₹2000.0",
-      badge: "Out of Stock",
-      badgeColor: "bg-red-500",
-      categories: ["Vitamins", "Supplements"],
-      brands: ["Brand 1"],
-    },
-    {
-      image: popularProducts.image5,
-      title: "Vitamin C",
-      rating: 3,
-      price: "₹250.0",
-      badge: "10% OFF",
-      badgeColor: "bg-orange-500",
-      categories: ["Vitamins", "Supplements"],
-      brands: ["Brand 2"],
-    },
-    {
-      image: popularProducts.image6,
-      title: "Vitamin D3",
-      rating: 4.5,
-      price: "₹250.0",
-      badge: "10% OFF",
-      categories: ["Vitamins", "Supplements"],
-      brands: ["Brand 4"],
-    },
-    {
-      image: popularProducts.image5,
-      title: "Vitamin C",
-      rating: 3,
-      price: "₹250.0",
-      badge: "10% OFF",
-      badgeColor: "bg-orange-500",
-      categories: ["Vitamins", "Supplements"],
-      brands: ["Brand 2"],
-    },
-    {
-      image: popularProducts.image4,
-      title: "Vitamin B12",
-      rating: 4.5,
-      price: "₹2000.0",
-      badge: "New",
-      badgeColor: "bg-orange-500",
-      categories: ["Vitamins", "Supplements"],
-      brands: ["Brand 1"],
-    },
-    {
-      image: popularProducts.image1,
-      title: "True Balance Vitamin",
-      rating: 4.5,
-      price: "₹250.0",
-      badge: "Out of Stock",
-      badgeColor: "bg-red-500",
-      categories: ["Vitamins", "Supplements"],
-      brands: ["Brand 5"],
-    },
-    {
-      image: popularProducts.image2,
-      title: "Body Lotion 200ml",
-      rating: 4,
-      price: "₹150.0",
-      badge: "" || null,
-      badgeColor: "",
-      categories: ["Skin Care", "Body Care"],
-      brands: ["Brand 6"],
-    },
-  ];
-
   return (
     <div className="overflow-x-hidden">
       {/* Head Title */}
@@ -171,8 +66,8 @@ export default function Shop() {
           {/* Products */}
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-4">
             {/* Product Card */}
-            {popularProductsData.map((product, index) => (
-              <ShopProductCard key={index} {...product} />
+            {ProductsData.map((product, index) => (
+              <ShopProductCard key={index} product={product} />
             ))}
           </div>
         </div>

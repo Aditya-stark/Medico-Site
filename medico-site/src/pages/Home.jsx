@@ -13,6 +13,7 @@ import { InfiniteImageSlider } from "../components/InfiniteImageSlider";
 import WhyChooseUs from "../components/WhyChooseUs";
 
 function Home() {
+  // DummyData
   const popularProductsData = [
     {
       image: popularProducts.image1,
@@ -86,6 +87,7 @@ function Home() {
     },
   ];
 
+  //Dummny Data
   const categories = [
     {
       id: 1,

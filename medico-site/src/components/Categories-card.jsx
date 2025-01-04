@@ -1,5 +1,4 @@
 import React from "react";
-import medicineIcon from "../assets/images/CategoriesLogo/medicine.svg";
 
 function Categories_card({ name, itemsCount, icon }) {
   return (
