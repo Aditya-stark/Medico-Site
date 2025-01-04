@@ -69,10 +69,10 @@ export default function ShopProductCard({ product }) {
         </p>
         {/* Cart Button */}
         <div className="absolute bottom-2 right-2 md:bottom-4 md:right-4 flex space-x-2">
-          <button className="w-8 h-8 md:w-10 md:h-10 bg-orange-500 text-white rounded-full shadow-md hover:bg-yellow-600 transform transition-transform duration-300 hover:scale-110">
+          <button className="w-6 h-6 md:w-8 md:h-8 bg-orange-500 text-white rounded-full shadow-md hover:bg-yellow-600 transform transition-transform duration-300 hover:scale-110">
             <FontAwesomeIcon icon={faDollarSign} />
           </button>
-          <button className="w-8 h-8 md:w-10 md:h-10 bg-teal-500 text-white rounded-full shadow-md hover:bg-teal-600 transform transition-transform duration-300 hover:scale-110">
+          <button className="w-6 h-6 md:w-8 md:h-8 bg-teal-500 text-white rounded-full shadow-md hover:bg-teal-600 transform transition-transform duration-300 hover:scale-110">
             <FontAwesomeIcon icon={faShoppingCart} />
           </button>
         </div>

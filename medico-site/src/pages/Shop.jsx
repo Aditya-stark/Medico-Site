@@ -18,20 +18,20 @@ export default function Shop() {
         {/*Left Section with reset button, Price Range, Categories DropDown and Brand DropDown */}
         <div className="flex flex-col gap-4 md:w-1/4 px-4 ">
           <div className="flex justify-between items-center gap-4 w-full rounded-lg bg-white p-4 mt-10 shadow">
-            <p className="text-2xl font-bold text-gray-800">Filters</p>
+            <p className="text-2xl md:text-3xl font-bold text-gray-800">Filters</p>
             <ResetBtn />
           </div>
 
           <PriceRange />
           <div className=" items-center w-full bg-white rounded-lg p-4 shadow">
-            <p className="text-lg font-bold text-gray-800 mb-2">
+            <p className="text-lg md:text-xl font-bold text-gray-800 mb-2">
               Filter by Category
             </p>
             <Dropdown title="Select Categories" />
           </div>
 
           <div className=" items-center w-full bg-white rounded-lg p-4 shadow">
-            <p className="text-lg font-bold text-gray-800 mb-2">
+            <p className="text-lg md:text-xl font-bold text-gray-800 mb-2">
               Filter by Category
             </p>
             <Dropdown
@@ -53,12 +53,12 @@ export default function Shop() {
           {/* upper bar */}
           <div className=" md:flex md:flex-row md:justify-start rounded-lg bg-white p-4 mt-10 shadow gap-4 ">
             <div className="flex items-center md:gap-4">
-              <p className="text-[12px] pr-2 md:text-xl md:pr-0 text-gray-500">
+              <p className="text-[12px] md:text-xl pr-2 md:pr-0 text-gray-500">
                 Sort By:
               </p>
               <SortDropDown />
             </div>
-            <p className="mt-2 md:flex md:mt-0 self-center text-sm  md:text-xl text-gray-600">
+            <p className="mt-2 md:mt-0 self-center text-sm md:text-xl text-gray-600">
               Total Items Found: 100
             </p>
           </div>
