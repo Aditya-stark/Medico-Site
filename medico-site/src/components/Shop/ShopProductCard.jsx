@@ -1,4 +1,3 @@
-import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faStar,
@@ -6,25 +5,34 @@ import {
   faShoppingCart,
   faDollarSign,
 } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
-export default function DiscountProductCard({
-  image,
-  title,
-  rating,
-  price,
-  discount,
-}) {
-  // Calculate the number of full, half, and empty stars based on the rating
+export default function ShopProductCard({ product }) {
+  const { image, title, rating, price, badge, badgeColor } = product;
+  // Star Rating Calculation
   const fullStars = Math.floor(rating);
   const halfStar = rating % 1 !== 0;
   const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
 
+  //Navigation to Single Product Page
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate(`/product/${product.id}`);
+  };
+
   return (
-    <div className="card bg-white rounded-lg shadow-lg p-4 relative overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer">
-      {/* Discount Badge */}
-      <div className="absolute top-2 right-2 bg-red-500 text-white text-[10px] sm:text-xs md:text-sm font-bold px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full">
-        {discount}
-      </div>
+    <div
+      onClick={handleClick}
+      className="card bg-white rounded-lg shadow-lg p-4 relative overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+    >
+      {/* HOT Badge */}
+      {badge !== null && (
+        <div
+          className={`absolute top-2 right-2 ${badgeColor} text-white text-xs font-bold px-2 py-1 rounded-full`}
+        >
+          {badge}
+        </div>
+      )}
 
       {/* Product Image */}
       <div className="flex justify-center items-center h-48">
@@ -36,7 +44,7 @@ export default function DiscountProductCard({
       </div>
 
       {/* Product All Details */}
-      <div className="mt-2 sm:mt-3 md:mt-4">
+      <div className="mt-4">
         <h3 className="text-gray-800 font-bold overflow-hidden text-ellipsis text-sm md:text-lg">
           {title}
         </h3>
@@ -54,12 +62,12 @@ export default function DiscountProductCard({
               />
             ))}
           </div>
-          <span className="ml-2 text-gray-500 text-sm">{rating}</span>
+          <span className="ml-2 text-gray-500">{rating}</span>
         </div>
-        <p className="text-teal-600 text-base sm:text-lg md:text-xl font-semibold mt-1 sm:mt-2">
+        <p className="text-teal-600 font-semibold mt-1 md:mt-2 text-base md:text-lg">
           {price}
         </p>
-        {/* Cart and Buy Now Buttons */}
+        {/* Cart Button */}
         <div className="absolute bottom-2 right-2 md:bottom-4 md:right-4 flex space-x-2">
           <button className="w-6 h-6 md:w-8 md:h-8 bg-orange-500 text-white rounded-full shadow-md hover:bg-yellow-600 transform transition-transform duration-300 hover:scale-110">
             <FontAwesomeIcon icon={faDollarSign} />
