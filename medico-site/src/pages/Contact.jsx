@@ -12,6 +12,10 @@ import "leaflet/dist/leaflet.css";
 import "leaflet-defaulticon-compatibility";
 
 export default function Contact() {
+  //To Display from Top Always
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   useEffect(() => {
     // Map initialization
     const map = L.map("map", {

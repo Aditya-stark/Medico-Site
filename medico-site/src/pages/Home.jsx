@@ -11,8 +11,10 @@ import { Bigbanner } from "../components/Bigbanner";
 import BigSectionName from "../components/BigSectionName";
 import { InfiniteImageSlider } from "../components/InfiniteImageSlider";
 import WhyChooseUs from "../components/WhyChooseUs";
+import { ProductsData } from "../DummyData/productdata";
 
 function Home() {
+
   // DummyData
   const popularProductsData = [
     {
@@ -168,9 +170,9 @@ function Home() {
         </div>
 
         {/* Popular Product */}
-        <SectionName title="Popular Product" link={"#"} className="mt-10" />
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-4 p-10">
-          {popularProductsData.map((product, index) => (
+        <SectionName title="Popular Product" link={"/shop"} className="mt-10" />
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 mt-4">
+          {ProductsData.map((product, index) => (
             <PopularProductCard key={index} {...product} />
           ))}
         </div>
@@ -184,7 +186,7 @@ function Home() {
         />
         <div className="flex flex-wrap">
           <div className="w-full lg:w-3/4">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-10">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-4">
               {[...Array(8)].map((_, index) => (
                 <DiscountProductCard
                   key={index}
@@ -212,8 +214,10 @@ function Home() {
         {/* Our Clients Sections */}
         <BigSectionName title="Our Clients" className="mt-10" />
       </div>
+      
       {/* Image Slider *NOT FINAL*/}
-      <InfiniteImageSlider />
+      {/* <InfiniteImageSlider /> */}
+
     </div>
   );
 }

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import BigSectionName from "../components/BigSectionName";
 import Categories_card from "../components/Categories-card";
 import PageTitle from "../components/PageTitle";
@@ -78,6 +79,11 @@ export default function Categories() {
       icon: "https://live.themewild.com/medion/assets/img/icon/pet-care.svg",
     },
   ];
+
+  //To Display from Top Always
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="overflow-x-hidden">

@@ -50,9 +50,13 @@ export default function Cart() {
       price: 500,
       quantity: 1,
       image: "https://live.themewild.com/medion/assets/img/product/05.png",
-    }
-
+    },
   ]);
+
+  //To Display from Top Always
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // Quantity Change
   const handleQuantityChange = (id, delta) => {
@@ -70,7 +74,7 @@ export default function Cart() {
     setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
   };
 
-    // Calculate Summary
+  // Calculate Summary
   const calculateSummary = () => {
     const subTotal = cartItems.reduce(
       (acc, item) => acc + item.price * item.quantity,

@@ -8,6 +8,7 @@ import ShopProductCard from "../components/Shop/ShopProductCard";
 import { ProductsData } from "../DummyData/productdata"; // Import the dummy data
 
 export default function Shop() {
+ 
   return (
     <div className="overflow-x-hidden">
       {/* Head Title */}
@@ -18,7 +19,9 @@ export default function Shop() {
         {/*Left Section with reset button, Price Range, Categories DropDown and Brand DropDown */}
         <div className="flex flex-col gap-4 md:w-1/4 px-4 ">
           <div className="flex justify-between items-center gap-4 w-full rounded-lg bg-white p-4 mt-10 shadow">
-            <p className="text-2xl md:text-3xl font-bold text-gray-800">Filters</p>
+            <p className="text-2xl md:text-3xl font-bold text-gray-800">
+              Filters
+            </p>
             <ResetBtn />
           </div>
 

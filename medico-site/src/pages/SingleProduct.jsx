@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import PageTitle from "../components/PageTitle";
 import { ProductsData } from "../DummyData/productdata";
@@ -7,10 +7,11 @@ import { faStar, faStarHalfAlt } from "@fortawesome/free-solid-svg-icons";
 
 export default function SingleProduct() {
   const { productId } = useParams();
-
   const product = ProductsData.find(
     (product) => product.id === Number(productId)
   );
+
+  const [mainImage, setMainImage] = useState(product?.image);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -31,6 +32,13 @@ export default function SingleProduct() {
   const halfStar = product.rating % 1 !== 0;
   const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
 
+  const handleThumbnailClick = (image) => {
+    setMainImage(image);
+  };
+
+  const testimage =
+    "https://live.themewild.com/medion/assets/img/product/07.png";
+
   return (
     <div className="overflow-x-hidden">
       <PageTitle title={product.title} />
@@ -44,24 +52,28 @@ export default function SingleProduct() {
             <div className="flex-1 md:w-[60%]">
               <div className="flex justify-center border-gray-300 border-2 rounded-xl p-4">
                 <img
-                  src={product.image}
+                  src={mainImage}
                   alt={product.title}
                   className="md:w-[80%] w-full rounded-lg"
                 />
               </div>
+
               <div className="flex justify-center gap-4 mt-4">
-                {[...Array(3)].map((_, index) => (
-                  <div
-                    key={index}
-                    className="flex justify-center border-gray-300 border-2 rounded-xl p-4"
-                  >
-                    <img
-                      src={product.image}
-                      alt={`Thumbnail ${index + 1}`}
-                      className="w-20 h-20 object-cover rounded-lg cursor-pointer hover:opacity-75"
-                    />
-                  </div>
-                ))}
+                {[product.image, testimage, product.image].map(
+                  (image, index) => (
+                    <div
+                      key={index}
+                      className="flex justify-center border-gray-300 border-2 rounded-xl p-4"
+                      onClick={() => handleThumbnailClick(image)}
+                    >
+                      <img
+                        src={image}
+                        alt={`Thumbnail ${index + 1}`}
+                        className="w-20 h-20 object-cover rounded-lg cursor-pointer hover:opacity-75"
+                      />
+                    </div>
+                  )
+                )}
               </div>
             </div>
 

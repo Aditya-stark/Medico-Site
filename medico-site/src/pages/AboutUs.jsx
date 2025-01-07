@@ -4,9 +4,13 @@ import FeaturesBanner from "../components/FeaturesBanner";
 import { ProfileCard } from "../components/AboutUs/ProfileCard";
 import BigSectionName from "../components/BigSectionName";
 import PageTitle from "../components/PageTitle";
-import { Link } from "react-router-dom";
 
 export default function AboutUs() {
+  //To Display from Top Always
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       {/* Head Title */}
